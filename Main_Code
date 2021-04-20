@@ -1,0 +1,12 @@
+:-use_module(library(csv)).
+
+
+?-csv_read_file('symbolic-output.csv',Rows,[functor(table),arity(6)]),maplist(assert,Rows).
+
+
+
+""" I am getting this error :
+No permission to call sandboxed `open(_1612,_1614,_1616,_1618)'
+Reachable from:
+	  csv:phrase_from_file(A,B,C)
+	  csv_read_file(A,B,C) """
