@@ -16,3 +16,41 @@ No permission to call sandboxed `open(_1612,_1614,_1616,_1618)'
 Reachable from:
 	  csv:phrase_from_file(A,B,C)
 	  csv_read_file(A,B,C) """
+	  
+########################################################################################################################################################################
+%after this part i tried to generate knowledge base by hand.
+	  
+% Student exercise profile
+:- set_prolog_flag(occurs_check, error).        % disallow cyclic terms
+:- set_prolog_stack(global, limit(8 000 000)).  % limit term space (8Mb)
+:- set_prolog_stack(local,  limit(2 000 000)).  % limit environment space
+
+% Your program goes here
+
+
+/** <examples> Your example queries go here, e.g.
+?- member(X, [cat, mouse]).
+*/
+
+
+% With code below we can generate columns which they are different from each other and unique.
+columns(C1,C2,C3,C4,C5,C6,C7):-
+    column(C1),column(C2),column(C3),column(C4),column(C5),column(C6),column(C7),
+    \+C1=C2,\+C1=C3,\+C1=C4,\+C1=C5,\+C1=C6,\+C1=C7,
+    \+C2=C3,\+C2=C4,\+C2=C5,\+C2=C6,\+C2=C7,
+    \+C3=C4,\+C3=C5,\+C3=C6,\+C3=C7,
+    \+C4=C5,\+C4=C6,\+C4=C7,
+    \+C5=C6,\+C5=C7,
+    \+C6=C7.
+% Below we defined our columns's names
+column(c1).
+column(c2).
+column(c3).
+column(c4).
+column(c5).
+column(c6).
+column(c7).
+
+
+
+       
