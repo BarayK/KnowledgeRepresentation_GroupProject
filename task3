@@ -8,3 +8,31 @@ row('I4', vh, 0.55, h, 0.98, h, 0.49, h, 0.55, vh, 0.73, h, 0.88, h, 0.55).
 row('I5', h, 0.98, vh, 1.0, vh, 1.0, vh, 1.0, vh, 0.98, h, 0.49, h, 0.67).
 row('I6', h, 0.98, vh, 0.88, vh, 0.92, h, 0.78, vl, 0.98, h, 0.92, m, 1.0).
 row('I7', h, 0.96, h, 0.49, h, 0.96, vh, 0.78, h, 0.96, m, 0.92, m, 0.96).
+
+
+
+% After getting full dataset (in SWI-Prolog Online i couldnt do it ) we will check three condition only C5 is "h"  or only C7 is "h" or both of them are "h"
+%below i manage to do for only C5 or C7 because i couldnt open full knowledge database it did not work on conjunction model.
+
+%below ones are manually generated becasue i couldnt solve to read csv file SWI-Prolog online 
+
+row('I1', h, 0.73, vh, 0.49, h, 0.55, h, 0.61, vh, 1.0, vh, 0.78, m, 0.88).
+row('I2', z, 1.0, vl, 1.0, h, 1.0, vl, 0.88, m, 0.84, m, 1.0, h, 0.84).
+row('I3', vh, 0.84, h, 1.0, m, 0.78, h, 0.84, h, 0.67, vh, 0.73, m, 0.96).
+row('I4', vh, 0.55, h, 0.98, h, 0.49, h, 0.55, vh, 0.73, h, 0.88, h, 0.55).
+row('I5', h, 0.98, vh, 1.0, vh, 1.0, vh, 1.0, vh, 0.98, h, 0.49, h, 0.67).
+row('I6', h, 0.98, vh, 0.88, vh, 0.92, h, 0.78, vl, 0.98, h, 0.92, m, 1.0).
+row('I7', h, 0.96, h, 0.49, h, 0.96, vh, 0.78, h, 0.96, m, 0.92, m, 0.96).
+
+row(Row,CN1,N1,CN2,N2,CN3,N3,CN4,N4,CN5,N5,CN6,N6,CN7,N7).
+% Row<- row, CN<-Confidence number, N<-Number
+
+high(Row):-row(Row,_,_,_,_,_,_,_,_,h,_,_,_,h,_). % i was trying to do something with it but it is not working for now so just skip it
+
+% here i will give one example when you compile this code
+
+row(Row,CN1,N1,CN2,N2,CN3,N3,CN4,N4,h,N5,CN6,N6,CN7,N7). % this one means that search in knowledge base which CN5 is "h"
+
+%output is in that way
+Row	CN1	N1	CN2	N2	CN3	N3	CN4	N4	N5	CN6	N6	CN7	N7	
+'I3'	vh	0.84	h	1.0	m	0.78	h	0.84	0.67	vh	0.73	m	0.96	
