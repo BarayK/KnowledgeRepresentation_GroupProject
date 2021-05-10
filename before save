@@ -1,0 +1,53 @@
+I2  l 0.92  z 0.88  m 0.84  z 0.96   m 0.92   h 0.61   l 0.96
+
+row('I1', h, 0.73, vh, 0.49, h, 0.55, h, 0.61, vh, 1.0, vh, 0.78, m, 0.88).
+row('I2', z, 1.0, vl, 1.0, h, 1.0, vl, 0.88, m, 0.84, m, 1.0, h, 0.84).
+row('I3', vh, 0.84, h, 1.0, m, 0.78, h, 0.84, h, 0.67, vh, 0.73, m, 0.96).
+row('I4', vh, 0.55, h, 0.98, h, 0.49, h, 0.55, vh, 0.73, h, 0.88, h, 0.55).
+row('I5', h, 0.98, vh, 1.0, vh, 1.0, vh, 1.0, vh, 0.98, h, 0.49, h, 0.67).
+row('I6', h, 0.98, vh, 0.88, vh, 0.92, h, 0.78, vl, 0.98, h, 0.92, m, 1.0).
+row('I7', h, 0.96, h, 0.49, h, 0.96, vh, 0.78, h, 0.96, m, 0.92, m, 0.96).
+row('I8', m, 0.67, m, 0.55, vh, 0.61, h, 1.00, z, 1.00 ,h ,0.49 ,l, 0.84).
+row('I9', vh, 0.73,	vh,	0.96,	vh,	1.00,	vh,	0.98,	h,	0.78,	vh,	0.73,	h,	0.92).
+row('I10',	h,	1.00,	m,	0.92,	vh,	0.92,	l,	0.98,	m,	0.84,	vh,	0.55,	m,	0.88).
+row('I11',	vh,	1.00,	vh,	0.84,	h,	0.88,	m,	0.55,	m,	0.61,	l,	0.55,	z,	1.00).
+row('I12',	l,	1.00,	z,1.00,	z,	1.00,	z,	1.00,	l,	1.00,	z,	1.00,	vh,	0.55).
+row('I13',	h,	0.61,	vh,	0.49,	vh,	0.98,	h,	0.67,	vh,	1.00,	vh,	0.73,	vh,	1.00).
+row('I14'	,h	,0.73	,vh	,1.00	,vh	,0.96	,vh	,0.98	,vh	,0.96	,h	,0.55	,h	,0.73).
+row('I15',	h,	1.00,	h,	0.61,	h,	0.98,	vh,	1.00,	vh,	0.98,	vh,	0.73,	vh,	1.00).
+row('I16',	h,	1.00,	h,	0.61,	vh,	0.49,	vh,	1.00,	vh,	0.67,	h,	0.98,	h,	0.61).
+row('I17',	m,0.84,	m,	0.78,	vl,	0.98,	h,	0.98,	m,	0.78,	l,	0.96,	h,	0.84).
+row('I18',	m,0.96,	vh,	0.67,	h,	0.92,	vh,	0.84,	l,	0.73,	l,	1.00,	h,	0.92).
+row('I19'	,vh,	0.88,	m,	1.00,	h,	0.67,	l,	0.96,	vl,	0.98,	vh,	1.00,	h,	0.78).
+row('I20',	h,	0.73,	m,	0.96,	h,	0.98,	h,	1.00,	vh,	0.73,	h,	1.00,	l,	0.92).
+
+row(Row,CN1,N1,CN2,N2,CN3,N3,CN4,N4,CN5,N5,CN6,N6,CN7,N7).
+
+high_row(Row):-row(Row,_,_,_,_,_,_,_,_,h,N5,_,_,_,_),row(Row,_,_,_,_,_,_,_,_,_,_,_,_,h,N7).
+
+
+
+%row(Row,CN1,N1,CN2,N2,CN3,N3,CN4,N4,h,N5,CN6,N6,CN7,N7).
+
+
+symbolic_input_row('I1',	m,	0.88,	h,	0.92,	l,	0.96,	m,	1.00,	vh,	0.55,	vh,	0.61,	vl,	0.96).
+symbolic_input_row('I2'  l 0.92  z 0.88  m 0.84  z 0.96   m 0.92   h 0.61   l 0.96).
+symbolic_input_row().
+symbolic_input_row().
+symbolic_input_row().
+symbolic_input_row().
+symbolic_input_row().
+symbolic_input_row().
+symbolic_input_row().
+symbolic_input_row().
+symbolic_input_row().
+symbolic_input_row().
+symbolic_input_row().
+symbolic_input_row().
+symbolic_input_row().
+symbolic_input_row().
+symbolic_input_row().
+symbolic_input_row().
+symbolic_input_row().
+
+
