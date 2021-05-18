@@ -65,9 +65,9 @@ output('I19'	,vh,	0.88,	m,	1.00,	h,	0.67,	l,	0.96,	vl,	0.98,	vh,	1.00,	h,	0.78):
 output('I20',	h,	0.73,	m,	0.96,	h,	0.98,	h,	1.00,	vh,	0.73,	h,	1.00,	l,	0.92):-
   input('I20',h,0.67,vl,0.78,l,1.00,h,0.84,vh,0.61,l,0.67,vl,0.92).
 
+% Below is for query
 
-
-
+retractall(output()),retractall(input()), assertz(input(Row,_,_,_,_,_,_,_,IN4,_,_,_,IN6,_,_)), output(_,_,_,_,_,_,_,_,_,h,_,_,_,h,_)
 
 
 
