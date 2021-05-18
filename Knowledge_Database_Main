@@ -1,9 +1,5 @@
-:- dynamic output/15.
-:- dynamic input/15.
-
-output(Row,OCN1,ON1,OCN2,ON2,OCN3,ON3,ON4,ON4,OCN5,ON5,OCN6,ON6,OCN7,ON7).
-input(Row,ICN1,IN1,ICN2,IN2,ICN3,IN3,IN4,IN4,ICN5,IN5,ICN6,IN6,ICN7,IN7).
-
+:- dynamic output/7.
+:- dynamic input/7.
 
 output([h,0.73],[vh,0.49],[h,0.55],[h,0.61],[vh,1.0],[vh,0.78],[m,0.88]):-
   input([m,0.88],[h,0.92],[l,0.96],[m,1.00],[vh,0.55],[vh,0.61],[vl,0.96]).
@@ -65,11 +61,10 @@ output([vh,	0.88],[m,	1.00],[	h,	0.67],[	l,	0.96],[	vl,	0.98],[	vh,	1.00],[	h,	0
 output([h,	0.73],	[m,	0.96],[	h,	0.98],	[h,	1.00],	[vh,	0.73],[	h,	1.00],[	l,	0.92]):-
   input([h,0.67],[vl,0.78],[l,1.00],[h,0.84],[vh,0.61],[l,0.67],[vl,0.92]).
 
-% Below is for query
-
-retractall(output()),retractall(input()), assertz(input(Row,_,_,_,_,_,_,_,IN4,_,_,_,IN6,_,_)), output(_,_,_,_,_,_,_,_,_,h,_,_,_,h,_)
 
 
 
+
+retractall(output()),retractall(input()), assertz(output([_ ,_] ,[_ ,_] ,[_ ,_] ,[_ ,_] ,[A,_] ,[_ ,_] ,[B,_])), input([_,_],[_,_],[_,_],[Q,R],[_,_],[X,Y],[_,_]), A=h;A=vh, B=h;B=vh.
 
 
